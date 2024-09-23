@@ -57,6 +57,7 @@ vim.cmd([[
   filetype plugin indent on
 ]])
 
+
 -- Additional Neovim settings
 vim.opt.number = true
 vim.opt.cursorline = true
