@@ -1,5 +1,3 @@
--- Set up Neovim options
-vim.opt.termguicolors = true
 vim.opt.background = "dark"
 
 -- Define Solarized color palette
