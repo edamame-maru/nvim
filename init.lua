@@ -61,7 +61,6 @@ vim.cmd([[
 
 -- Additional Neovim settings
 vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
