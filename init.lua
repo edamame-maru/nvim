@@ -5,7 +5,7 @@ vim.opt.number = true
 vim.opt.termguicolors = true
 
 -- Set colorscheme to slate
-vim.cmd[[colorscheme slate]]
+vim.cmd[[colorscheme zaibatsu]]
 
 -- Create an event handler for the FileType autocommand
 vim.api.nvim_create_autocmd('FileType', {
@@ -24,15 +24,3 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- Configure completion
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-
--- Key mappings for completion
-local function set_keymaps()
-  local opts = { noremap = true, silent = true }
-  -- Navigate and select completion suggestions
-  vim.api.nvim_set_keymap('i', '<C-Space>', 'vim.lsp.omnifunc()', opts)
-  vim.api.nvim_set_keymap('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true, noremap = true })
-  vim.api.nvim_set_keymap('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { expr = true, noremap = true })
-end
-
--- Call the function to set keymaps
-set_keymaps()
