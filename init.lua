@@ -8,3 +8,4 @@ vim.opt.termguicolors = true
 -- Set background (uncomment one of these lines)
 -- vim.opt.background = "dark"
 -- vim.opt.background = "light"
+vim.cmd[[colo slate]]
