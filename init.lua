@@ -5,33 +5,25 @@ vim.opt.number = true
 vim.opt.termguicolors = true
 
 -- Show cursorline
-vim.opt.cursorline= true
+vim.opt.cursorline = true
 
 -- Plugins
 vim.call('plug#begin', '~/.vim/plugged')
 
-vim.call('plug#', 'rebelot/kanagawa.nvim')
-vim.call('plug#', 'jiangmiao/auto-pairs')
-vim.call('plug#', 'dense-analysis/ale')
+vim.call('plug#', 'rebelot/kanagawa.nvim')	-- Colorscheme
+vim.call('plug#', 'jiangmiao/auto-pairs')	-- Auto-Pairs 
+vim.call('plug#', 'neovim/nvim-lspconfig')	-- LSP 
 
 vim.call('plug#end')
 
 -- Set colorscheme
 vim.cmd('colorscheme kanagawa')
 
--- Make sure to set up ALE
-vim.g.ale_linters = {
-    rust = {'rust-analyzer'},
-}
+-- Setup LSP
+require'lspconfig'.rust_analyzer.setup{}
 
-vim.g.ale_fixers = {
-    rust = {'rustfmt'},
-}
+-- Auto-complete on typing
+vim.o.completeopt = "menuone,noselect"
 
--- Enable ALE
-vim.g.ale_enabled = 1
-vim.g.ale_lint_on_text_changed = 'always'
-vim.g.ale_lint_on_insert_leave = 1
-
--- Additional configurations for rust-analyzer
-vim.g.ale_rust_rust_analyzer_executable = 'rust-analyzer' -- Adjust the path if necessary
+-- Trigger completion with <C-Space>
+vim.api.nvim_set_keymap('i', '<C-Space>', '<C-x><C-o>', { noremap = true, silent = true })
