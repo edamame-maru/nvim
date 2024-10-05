@@ -22,8 +22,5 @@ vim.cmd('colorscheme kanagawa')
 -- Setup LSP
 require'lspconfig'.rust_analyzer.setup{}
 
--- Auto-complete on typing
-vim.o.completeopt = "menuone,noselect"
-
 -- Trigger completion with <C-Space>
 vim.api.nvim_set_keymap('i', '<C-Space>', '<C-x><C-o>', { noremap = true, silent = true })
