@@ -12,15 +12,8 @@ vim.call('plug#begin', '~/.vim/plugged')
 
 vim.call('plug#', 'rebelot/kanagawa.nvim')	-- Colorscheme
 vim.call('plug#', 'jiangmiao/auto-pairs')	-- Auto-Pairs 
-vim.call('plug#', 'neovim/nvim-lspconfig')	-- LSP 
 
 vim.call('plug#end')
 
 -- Set colorscheme
 vim.cmd('colorscheme kanagawa')
-
--- Setup LSP
-require'lspconfig'.rust_analyzer.setup{}
-
--- Trigger completion with <C-Space>
-vim.api.nvim_set_keymap('i', '<C-Space>', '<C-x><C-o>', { noremap = true, silent = true })
