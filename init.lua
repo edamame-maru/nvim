@@ -13,6 +13,7 @@ vim.call('plug#begin', '~/.vim/plugged')
 vim.call('plug#', 'rebelot/kanagawa.nvim')	-- Colorscheme
 vim.call('plug#', 'jiangmiao/auto-pairs')	-- Auto-Pairs 
 vim.call('plug#', 'rust-lang/rust.vim')		-- Rust.vim
+
 vim.call('plug#end')
 
 -- Set colorscheme
