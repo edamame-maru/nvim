@@ -20,7 +20,8 @@ Plug 'maxmx03/solarized.nvim' -- Solarized theme
 -- Useful plugins
 Plug 'jiangmiao/auto-pairs'             -- Auto-Pairs
 Plug 'rust-lang/rust.vim'               -- Rust.vim
-Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim' -- Status bar
+Plug 'mhinz/vim-startify' -- Startify
 
 vim.call('plug#end')
 
@@ -46,3 +47,11 @@ require('lualine').setup {
     lualine_z = {'location'}
   },
 }
+
+-- Set up lists
+vim.g.startify_lists = {
+    { type = 'files', header = {'   Recent Files'} },
+    { type = 'dir', header = {'   Current Directory'} },
+}
+
+vim.g.startify_session_persistence = 1  -- Enable session persistence
