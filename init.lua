@@ -10,11 +10,12 @@ vim.opt.cursorline = true
 -- Plugins
 vim.call('plug#begin', '~/.vim/plugged')
 
-vim.call('plug#', 'rebelot/kanagawa.nvim')	-- Colorscheme
+-- vim.call('plug#', 'rebelot/kanagawa.nvim')	-- Colorscheme
+vim.call('plug#', 'dracula/vim', { as = 'dracula' })   -- Add the Dracula theme
 vim.call('plug#', 'jiangmiao/auto-pairs')	-- Auto-Pairs 
 vim.call('plug#', 'rust-lang/rust.vim')		-- Rust.vim
 
 vim.call('plug#end')
 
 -- Set colorscheme
-vim.cmd('colorscheme kanagawa')
+vim.cmd('colorscheme dracula')
