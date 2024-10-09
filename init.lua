@@ -32,7 +32,17 @@ require('lualine').setup {
   options = {
     theme = 'dracula',  -- You can set the theme to 'dracula' or another if you prefer
     section_separators = '',  -- Customize separators if needed
-    component_separators = ''
-  }
-}
+    component_separators = '',
+    icons_enabled = true
+  },
 
+    sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+
+    lualine_x = {'encoding', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+}
