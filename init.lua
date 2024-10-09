@@ -8,14 +8,29 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 
 -- Plugins
+local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.vim/plugged')
 
-vim.call('plug#', 'rebelot/kanagawa.nvim')	-- Add the Kanagawa theme
-vim.call('plug#', 'dracula/vim', { as = 'dracula' })   -- Add the Dracula theme
-vim.call('plug#', 'jiangmiao/auto-pairs')	-- Auto-Pairs 
-vim.call('plug#', 'rust-lang/rust.vim')		-- Rust.vim
+-- Themes
+Plug 'rebelot/kanagawa.nvim'           -- Kanagawa theme
+Plug('dracula/vim', { as = 'dracula' })  -- Dracula theme
+
+-- Useful plugins
+Plug 'jiangmiao/auto-pairs'             -- Auto-Pairs
+Plug 'rust-lang/rust.vim'               -- Rust.vim
+Plug 'nvim-lualine/lualine.nvim'
 
 vim.call('plug#end')
 
 -- Set colorscheme
 vim.cmd('colorscheme dracula')
+
+-- Lualine setup
+require('lualine').setup {
+  options = {
+    theme = 'dracula',  -- You can set the theme to 'dracula' or another if you prefer
+    section_separators = '',  -- Customize separators if needed
+    component_separators = ''
+  }
+}
+
