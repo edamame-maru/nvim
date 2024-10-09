@@ -14,6 +14,8 @@ vim.call('plug#begin', '~/.vim/plugged')
 -- Themes
 Plug 'rebelot/kanagawa.nvim'           -- Kanagawa theme
 Plug('dracula/vim', { as = 'dracula' })  -- Dracula theme
+Plug 'gbprod/nord.nvim' -- Nord theme
+Plug 'maxmx03/solarized.nvim' -- Solarized theme
 
 -- Useful plugins
 Plug 'jiangmiao/auto-pairs'             -- Auto-Pairs
