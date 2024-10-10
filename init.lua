@@ -23,6 +23,7 @@ Plug 'rust-lang/rust.vim'               -- Rust.vim
 Plug 'nvim-lualine/lualine.nvim' -- Status bar
 Plug 'mhinz/vim-startify' -- Startify
 
+
 vim.call('plug#end')
 
 -- Set colorscheme
