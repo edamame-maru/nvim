@@ -1,3 +1,7 @@
+-- Install node.js, for coc.nvim:
+-- https://nodejs.org/en/download/
+
+
 vim.opt.number = true             -- Enable line numbers
 vim.opt.termguicolors = true      -- Enable 24-bit RGB color in the TUI
 vim.opt.cursorline = true	  -- Show cursorline
