@@ -25,6 +25,7 @@ Plug 'rust-lang/rust.vim'               -- Rust.vim
 Plug 'nvim-lualine/lualine.nvim'        -- Lualine status bar
 Plug 'nvim-tree/nvim-web-devicons'      -- Additional icons for lualine
 Plug('neoclide/coc.nvim', {branch = 'release'})  -- Conquer of Completion
+Plug 'ervandew/supertab'                -- Supertab
 
 vim.call('plug#end')
 
